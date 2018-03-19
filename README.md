@@ -1,1 +1,1 @@
-# Chrome-rex-AI
+# Chrome-Rex-AI
