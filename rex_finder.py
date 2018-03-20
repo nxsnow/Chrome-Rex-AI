@@ -9,13 +9,18 @@ def get_dis():
     img=np.array(pic)
     x = 88
     y = 146
-    y2 = 115
+    x2 = 92
+    y2 = 130
     dx = x
+    dx2 = x2
     base_color = img[5][5][0]
     while (dx <= 300):
         dx += 2
         if (abs(img[y][dx][0] - base_color) >= 5):
             return [dx-x,0]
+        dx2 += 2
+        if (abs(img[y2][dx2][0] - base_color) >= 5):
+            return [dx2-x2,1]
     if (DEBUG):
         print(img[y][x])
         plt.imshow(img)
@@ -28,6 +33,7 @@ def get_over():
     img = np.array(pic)
     base_color = img[5][5][0]
     DEBUG = False
+
     if (DEBUG):
         plt.imshow(img)
         plt.axis('off')
