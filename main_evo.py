@@ -13,11 +13,13 @@ def main():
     RES = []
     for i in range(0,12):
         RES.append([0,i])
-    seed = 1
+    seed = 1.05
     turn = 0
     print("inited. Start.")
     while True:
         seed *= 0.9999
+        if (seed < 0.01 and random.uniform(0,1000)<=0.5):
+            seed = seed*5 + 0.01
         for i in range(12):
             time_start = time.time()
             while True:
